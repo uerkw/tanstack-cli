@@ -7,7 +7,7 @@ export function mergePackageJSON(
   packageJSON: Record<string, any>,
   overlayPackageJSON?: Record<string, any>,
 ) {
-  return {
+  const mergedPackageJSON: Record<string, any> = {
     ...packageJSON,
     ...(overlayPackageJSON || {}),
     dependencies: {
@@ -23,6 +23,37 @@ export function mergePackageJSON(
       ...(overlayPackageJSON?.scripts || {}),
     },
   }
+
+  const baseOnlyBuiltDependencies = Array.isArray(
+    packageJSON.pnpm?.onlyBuiltDependencies,
+  )
+    ? packageJSON.pnpm.onlyBuiltDependencies
+    : []
+  const overlayOnlyBuiltDependencies = Array.isArray(
+    overlayPackageJSON?.pnpm?.onlyBuiltDependencies,
+  )
+    ? overlayPackageJSON.pnpm.onlyBuiltDependencies
+    : []
+
+  const onlyBuiltDependencies = [
+    ...new Set([
+      ...baseOnlyBuiltDependencies,
+      ...overlayOnlyBuiltDependencies,
+    ]),
+  ]
+
+  if (packageJSON.pnpm || overlayPackageJSON?.pnpm) {
+    mergedPackageJSON.pnpm = {
+      ...packageJSON.pnpm,
+      ...overlayPackageJSON?.pnpm,
+    }
+
+    if (onlyBuiltDependencies.length) {
+      mergedPackageJSON.pnpm.onlyBuiltDependencies = onlyBuiltDependencies
+    }
+  }
+
+  return mergedPackageJSON
 }
 
 export function createPackageJSON(options: Options) {
