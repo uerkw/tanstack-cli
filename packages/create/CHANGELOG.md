@@ -1,5 +1,13 @@
 # @tanstack/create
 
+## 0.62.3
+
+### Patch Changes
+
+- Auto-generated changeset from semantic commits on main.
+
+  - fix(ci): use direct changeset publish args (b6f5ff5)
+
 ## 0.62.2
 
 ### Patch Changes

@@ -1,5 +1,16 @@
 # @tanstack/cli
 
+## 0.61.1
+
+### Patch Changes
+
+- Auto-generated changeset from semantic commits on main.
+
+  - fix(ci): use direct changeset publish args (b6f5ff5)
+
+- Updated dependencies []:
+  - @tanstack/create@0.62.3
+
 ## 0.61.0
 
 ### Minor Changes

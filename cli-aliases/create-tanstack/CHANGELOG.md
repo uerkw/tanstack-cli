@@ -1,5 +1,17 @@
 # create-tanstack
 
+## 0.54.12
+
+### Patch Changes
+
+- Auto-generated changeset from semantic commits on main.
+
+  - fix(ci): use direct changeset publish args (b6f5ff5)
+
+- Updated dependencies []:
+  - @tanstack/cli@0.61.1
+  - @tanstack/create@0.62.3
+
 ## 0.54.11
 
 ### Patch Changes
