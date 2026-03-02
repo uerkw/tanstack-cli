@@ -1,5 +1,11 @@
 # @tanstack/cli
 
+## 0.62.0
+
+### Minor Changes
+
+- Add a published skill tree for TanStack CLI workflows and include `skills` in package files so agent guidance ships in npm installs. ([`0cec826`](https://github.com/TanStack/cli/commit/0cec826040a7d2c79d65f47f76effa49a32163db))
+
 ## 0.61.1
 
 ### Patch Changes
