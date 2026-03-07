@@ -1,5 +1,11 @@
 # @tanstack/cli
 
+## 0.62.3
+
+### Patch Changes
+
+- Wire up TanStack Intent: CI workflows for skill validation and staleness checks, and update skill files to v0.62.1 ([`45c9d23`](https://github.com/TanStack/cli/commit/45c9d239d77967cc075ed8438f0ed22cc01a4555))
+
 ## 0.62.2
 
 ### Patch Changes
